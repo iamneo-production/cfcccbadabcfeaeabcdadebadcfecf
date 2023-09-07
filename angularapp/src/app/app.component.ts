@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'angularapp';
-  userForm: FormGroup;
+  userForm!: FormGroup;
   ngOnInit()
   {
     this.userForm=new FormGroup({

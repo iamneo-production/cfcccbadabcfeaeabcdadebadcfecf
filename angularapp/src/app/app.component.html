@@ -3,7 +3,7 @@
   <form [formGroup]="userForm">  
     <div>
     <input type="text" id="inputFirstname" name="inputFirstname" formControlName="inputFirstname" placeholder="Enter you name"><br>
-    <span *ngIf="!userForm.get('inputFirstname').valid" id="errorFirstName" style="margin-left: 30px;">Please enter a valid user name</span>
+    <span *ngIf="!userForm.get('inputFirstname')?.valid" id="errorFirstName" style="margin-left: 30px;">Please enter a valid user name</span>
     </div>
     <div class="gender">
       <label for="gender" >Gender:</label>
@@ -13,7 +13,7 @@
     <label for="gender">Female</label>
     <input type="radio" id="gender" name="gender" value="other" formControlName="gender">
     <label for="gender">Other</label><br>
-    <span *ngIf="!userForm.get('gender').valid" id="errorGender">Please select your gender</span>
+    <span *ngIf="!userForm.get('gender')?.valid" id="errorGender">Please select your gender</span>
     </div>
   
    <div class="country">
@@ -26,11 +26,11 @@
     <option value="AN">Andorra</option>  
     <option value="IN">India</option>   
   </select><br>
-  <span *ngIf="!userForm.get('country').valid" id="errorCountry">Please select the country</span>
+  <span *ngIf="!userForm.get('country')?.valid" id="errorCountry">Please select the country</span>
    </div>
    <div>
     <input type="text" id="city" name="city" formControlName="city" placeholder="Enter your city"><br>
-    <span *ngIf="!userForm.get('city').valid" id="errorCity" style="margin-left: 30px;">Please enter the city</span>
+    <span *ngIf="!userForm.get('city')?.valid" id="errorCity" style="margin-left: 30px;">Please enter the city</span>
    </div>
   
   
